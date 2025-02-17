@@ -12,7 +12,7 @@ const resumeData = {
         name: 'Emmanuel NSABAGASANI',
         title: 'Software Engineer | Cybersecurity Analyst | IT Educator',
         profileImage: 'images/profile.png',
-        backgroundImage: 'images/profile.png',
+        backgroundImage: 'images/bgprofile.jpg',
         shortBio: 'Software engineer and cybersecurity analyst passionate about building secure and scalable digital solutions.',
         fullBio: `I am a dedicated Software Engineer and Cybersecurity Analyst with a strong passion for building secure, scalable, and efficient digital solutions. 
                   With experience in full-stack development, cybersecurity operations, and ICT education, I have led projects that bridge the gap between theoretical 
