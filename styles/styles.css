@@ -1,0 +1,259 @@
+/* CSS Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --background-color: #f5f6fa;
+    --section-padding: 2em;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: var(--primary-color);
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Main Content */
+  main {
+    max-width: 1200px;
+    margin: 4em auto 0;
+    padding: 1em;
+  }
+  
+  section {
+    background: white;
+    padding: var(--section-padding);
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Profile */
+  .profile {
+    text-align: center;
+  }
+  
+  .profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+  }
+  
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1em;
+  }
+  
+  .skill-item {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.5em;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    display: grid;
+    gap: 1em;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, textarea {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+    }
+  
+    .nav-links.active {
+        display: flex;
+    }
+  
+    .nav-links li {
+        text-align: center;
+        padding: 1em;
+    }
+  
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        color: white;
+    }
+  
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    :root {
+        --section-padding: 1.5em;
+    }
+  
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+  }
+  /* Add these styles to your existing CSS */
+  
+  .expandable {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .expand-btn {
+    background: none;
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+  }
+  
+  .expand-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .expand-btn::after {
+    content: '▼';
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+  }
+  
+  .expand-btn.expanded::after {
+    transform: rotate(180deg);
+  }
+  
+  .content-short {
+    margin-bottom: 0.5em;
+  }
+  
+  .content-full {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1em;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin-top: 0.5em;
+  }
+  
+  .content-full.expanded {
+    display: block;
+    opacity: 1;
+  }
+  
+  .experience-item, .project-item {
+    padding: 1em;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 1em;
+  }
+  
+  .description-wrapper {
+    margin-top: 0.5em;
+  }
+  
+  .profile-header {
+    position: relative;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 60px;
+    border-radius: 10px;
+  }
