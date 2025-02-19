@@ -107,6 +107,34 @@ function createContactSection() {
     
     return section;
 }
+function createEducationSection(){
+    const section = document.createElement('section');
+    section.id = 'education';
+    
+    const title = document.createElement('h2');
+    title.textContent = 'Education';
+    section.appendChild(title);
+  
+    resumeData.education.forEach(edu => {
+        const eduItem = document.createElement('div');
+        eduItem.className = 'education-item';
+        
+        eduItem.innerHTML = `
+            <h3>${edu.school}</h3>
+            <p><i>${edu.degree} <strong>|</strong> ${edu.period}<i></p>
+        `;
+  
+        const descriptionWrapper = createExpandableSection(
+            edu.shortDescription,
+            edu.fullDescription
+        );
+        
+        eduItem.appendChild(descriptionWrapper);
+        section.appendChild(eduItem);
+    });
+return section;  
+}
+
 
 // Initialize Page
 function initializePage() {
@@ -115,6 +143,7 @@ function initializePage() {
     // Build all sections
     const sections = [
         createProfileSection(),
+        createEducationSection(),
         createExperienceSection(),
         createProjectsSection(),
         createSkillsSection(),

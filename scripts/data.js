@@ -2,11 +2,34 @@
 const resumeData = {
     navigation: [
         { id: 'about', text: 'About' },
+        {id:'education', text:'Education'},
         { id: 'experience', text: 'Experience' },
         { id: 'projects', text: 'Projects' },
         { id: 'skills', text: 'Skills' },
         { id: 'contact', text: 'Contact' }
     ],
+    education: [
+        {
+            school: 'University of Rwanda',
+            degree: 'Bachelor of Science in Computer Science',
+            period: '2020 - 2024',
+            shortDescription: 'Specialized in Software Engineering and Cybersecurity',
+            fullDescription: `• Graduated with First Class Honours
+                            • Led multiple software development projects
+                            • Conducted research in cybersecurity and cloud computing
+                            • Participated in national coding competitions`
+        },
+        {
+            school: 'Rwanda Coding Academy',
+            degree: 'Software Programming Certificate',
+            period: '2019 - 2020',
+            shortDescription: 'Intensive programming and software development training',
+            fullDescription: `• Completed advanced programming courses
+                            • Developed full-stack web applications
+                            • Participated in coding bootcamps
+                            • Won best innovative project award`
+        }
+      ],
 
     profile: {
         name: 'Emmanuel NSABAGASANI',
