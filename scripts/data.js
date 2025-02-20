@@ -8,29 +8,53 @@ const resumeData = {
         { id: 'skills', text: 'Skills' },
         { id: 'contact', text: 'Contact' }
     ],
-    education: [
-        {
-            school: 'University of Rwanda',
-            degree: 'Bachelor of Science in Computer Science',
-            period: '2020 - 2024',
-            shortDescription: 'Specialized in Software Engineering and Cybersecurity',
-            fullDescription: `• Graduated with First Class Honours
-                            • Led multiple software development projects
-                            • Conducted research in cybersecurity and cloud computing
-                            • Participated in national coding competitions`
-        },
-        {
-            school: 'Rwanda Coding Academy',
-            degree: 'Software Programming Certificate',
-            period: '2019 - 2020',
-            shortDescription: 'Intensive programming and software development training',
-            fullDescription: `• Completed advanced programming courses
-                            • Developed full-stack web applications
-                            • Participated in coding bootcamps
-                            • Won best innovative project award`
-        }
-      ],
-
+    education:[{
+        school: 'African Leadership University (ALU)',
+        degree: 'Bachelor of Science in Software Engineering',
+        period: '2023 - Present',
+        shortDescription: 'Specialized in Software Development and Cybersecurity',
+        fullDescription: `• Engaged in hands-on software engineering projects
+                          • Developing skills in cybersecurity operations
+                          • Participating in industry-driven hackathons and competitions
+                          • Collaborating on digital literacy initiatives`
+    },
+    {
+        school: 'Forward Edge Consulting Ltd.',
+        degree: 'Cybersecurity Certification',
+        period: '2024',
+        shortDescription: 'Advanced training in cybersecurity operations',
+        fullDescription: `• Completed a rigorous cybersecurity bootcamp
+                          • Received an elite recognition certificate
+                          • Gained hands-on experience in penetration testing and risk management
+                          • Worked on security governance frameworks`
+    },
+    {
+        school: 'GS Byumba Inyange',
+        degree: 'A2 Diploma in Mathematics, Computer Science, and Economics',
+        period: '2019 - 2023',
+        shortDescription: 'High school diploma with a focus on technology and economics',
+        fullDescription: `• Specialized in computer science and digital literacy
+                          • Led coding initiatives and student IT projects
+                          • Developed a strong foundation in mathematics and problem-solving`
+    },
+    {
+        school: 'ES Sancta Maria Karambo',
+        degree: 'O-Level Certificate',
+        period: '2016 - 2019',
+        shortDescription: 'General secondary education',
+        fullDescription: `• Excelled in STEM subjects
+                          • Built foundational knowledge in programming`
+    },
+    {
+        school: 'Academy De La Salle Byumba',
+        degree: 'Primary Education',
+        period: '2010 - 2016',
+        shortDescription: 'Primary education with a focus on foundational STEM skills',
+        fullDescription: `• Developed early interest in technology and computing
+                          • Built problem-solving and analytical thinking skills`
+    }
+],
+    
     profile: {
         name: 'Emmanuel NSABAGASANI',
         title: 'Software Engineer | Cybersecurity Analyst | IT Educator',
@@ -138,6 +162,12 @@ const resumeData = {
         'Penetration Testing', 'Secure Coding Practices', 'Risk Management', 'Linux',
         'GitHub & Version Control', 'Incident Response', 'Python', 'JavaScript', 'React', 
         'Node.js', 'Django', 'SQL & NoSQL Databases', 'Cloud Security', 'Project Management'
-    ]
+    ],
+    socialMedia: {
+        github: 'https://github.com/',
+        linkedin: 'https://linkedin.com/in/emmanuel-nsabagasani',
+        twitter: 'https://x.com/ENsabagasa56660',
+        email: 'e.nsabagasa@alustudent.com'
+      }
+    
   };
-  

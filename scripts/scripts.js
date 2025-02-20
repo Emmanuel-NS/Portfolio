@@ -2,6 +2,7 @@
 const mainContent = document.getElementById('main-content');
 const navLinks = document.querySelector('.nav-links');
 const hamburger = document.querySelector('.hamburger');
+const footer = document.querySelector('.footer');
 
 // Build Navigation
 function buildNavigation() {
@@ -21,48 +22,116 @@ function createProjectsSection() {
     const section = document.createElement('section');
     section.id = 'projects';
     
-    section.innerHTML = `
-        <h2>Projects</h2>
-        ${resumeData.projects.map(project => `
-            <div class="project-item">
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-                <p>Technologies: ${project.technologies.join(', ')}</p>
-            </div>
-        `).join('')}
-    `;
-    
-    
-    return section;
-}
-function createProjectsSection() {
-  const section = document.createElement('section');
-  section.id = 'projects';
+    const title = document.createElement('h2');
+    title.textContent = 'Projects';
+    section.appendChild(title);
   
-  const title = document.createElement('h2');
-  title.textContent = 'Projects';
-  section.appendChild(title);
-
-  resumeData.projects.forEach(project => {
-      const projectItem = document.createElement('div');
-      projectItem.className = 'project-item';
-      
-      projectItem.innerHTML = `
-          <h3>${project.title}</h3>
-          <p>Technologies: ${project.technologies.join(', ')}</p>
-      `;
-
-      const descriptionWrapper = createExpandableSection(
-          project.shortDescription,
-          project.fullDescription
-      );
-      
-      projectItem.appendChild(descriptionWrapper);
-      section.appendChild(projectItem);
-  });
-
-  return section;
-}
+    const container = document.createElement('div');
+    container.className = 'projects-container';
+  
+    const slider = document.createElement('div');
+    slider.className = 'projects-slider';
+  
+    // Create slide indicators
+    const indicators = document.createElement('div');
+    indicators.className = 'slide-indicators';
+  
+    resumeData.projects.forEach((project, index) => {
+        const projectItem = document.createElement('div');
+        projectItem.className = `project-item ${index === 0 ? 'active' : ''}`;
+        
+        projectItem.innerHTML = `
+            <h3>${project.title}</h3>
+            <p>Technologies: ${project.technologies.join(', ')}</p>
+        `;
+  
+        const descriptionWrapper = createExpandableSection(
+            project.shortDescription,
+            project.fullDescription
+        );
+        
+        projectItem.appendChild(descriptionWrapper);
+        slider.appendChild(projectItem);
+  
+        // Add indicator dot
+        const indicator = document.createElement('div');
+        indicator.className = `indicator ${index === 0 ? 'active' : ''}`;
+        indicator.addEventListener('click', () => {
+            currentSlide = index;
+            updateSlider();
+        });
+        indicators.appendChild(indicator);
+    });
+  
+    const controls = document.createElement('div');
+    controls.className = 'slider-controls';
+    controls.innerHTML = `
+        <button class="slider-btn prev-btn" disabled>Previous</button>
+        <button class="slider-btn next-btn">Next</button>
+    `;
+  
+    container.appendChild(slider);
+    section.appendChild(container);
+    section.appendChild(indicators);
+    section.appendChild(controls);
+  
+    // Add slider functionality
+    let currentSlide = 0;
+    const totalSlides = resumeData.projects.length;
+    const slides = slider.querySelectorAll('.project-item');
+    const indicatorDots = indicators.querySelectorAll('.indicator');
+  
+    function updateSlider() {
+        // Update slide position
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update active states
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentSlide);
+        });
+        
+        indicatorDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+  
+        // Update button states
+        const prevBtn = controls.querySelector('.prev-btn');
+        const nextBtn = controls.querySelector('.next-btn');
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === totalSlides - 1;
+    }
+  
+    // Add button event listeners
+    const prevBtn = controls.querySelector('.prev-btn');
+    const nextBtn = controls.querySelector('.next-btn');
+  
+    prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSlider();
+        }
+    });
+  
+    nextBtn.addEventListener('click', () => {
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
+            updateSlider();
+        }
+    });
+  
+    // Add keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft' && currentSlide > 0) {
+            currentSlide--;
+            updateSlider();
+        } else if (e.key === 'ArrowRight' && currentSlide < totalSlides - 1) {
+            currentSlide++;
+            updateSlider();
+        }
+    });
+  
+    return section;
+  }
 
 // Build Skills Section
 function createSkillsSection() {
@@ -153,6 +222,9 @@ function initializePage() {
     // Add sections to main content
     sections.forEach(section => mainContent.appendChild(section));
     
+    // Add footer
+    createFooter();
+    
     // Setup event listeners
     setupEventListeners();
 }
@@ -235,33 +307,37 @@ function createExpandableSection(shortContent, fullContent) {
 
 // experience section creation
 function createExperienceSection() {
-  const section = document.createElement('section');
-  section.id = 'experience';
+    const section = document.createElement('section');
+    section.id = 'experience';
+    
+    const title = document.createElement('h2');
+    title.textContent = 'Experience';
+    section.appendChild(title);
   
-  const title = document.createElement('h2');
-  title.textContent = 'Experience';
-  section.appendChild(title);
-
-  resumeData.experience.forEach(exp => {
-      const expItem = document.createElement('div');
-      expItem.className = 'experience-item';
-      
-      expItem.innerHTML = `
-          <h3>${exp.title}</h3>
-          <p>${exp.company} | ${exp.period}</p>
-      `;
-
-      const descriptionWrapper = createExpandableSection(
-          exp.shortDescription,
-          exp.fullDescription
-      );
-      
-      expItem.appendChild(descriptionWrapper);
-      section.appendChild(expItem);
-  });
-
-  return section;
-}
+    const grid = document.createElement('div');
+    grid.className = 'experience-grid';
+  
+    resumeData.experience.forEach(exp => {
+        const expItem = document.createElement('div');
+        expItem.className = 'experience-item';
+        
+        expItem.innerHTML = `
+            <h3>${exp.title}</h3>
+            <p>${exp.company} | ${exp.period}</p>
+        `;
+  
+        const descriptionWrapper = createExpandableSection(
+            exp.shortDescription,
+            exp.fullDescription
+        );
+        
+        expItem.appendChild(descriptionWrapper);
+        grid.appendChild(expItem);
+    });
+  
+    section.appendChild(grid);
+    return section;
+  }
 
 
 function createProfileSection() {
@@ -308,3 +384,34 @@ function createProfileSection() {
 
   return section;
 }
+  
+// Create Footer
+function createFooter() {
+    const footerContent = document.createElement('div');
+    footerContent.className = 'footer-content';
+    
+    footerContent.innerHTML = `
+        <div class="footer-info">
+            <h3>${resumeData.profile.name}</h3>
+            <p>${resumeData.profile.title}</p>
+            <p>Email: ${resumeData.socialMedia.email}</p>
+        </div>
+        <div class="social-links">
+            <a href="${resumeData.socialMedia.github}" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="${resumeData.socialMedia.linkedin}" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="${resumeData.socialMedia.twitter}" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; ${new Date().getFullYear()} ${resumeData.profile.name}. All rights reserved.</p>
+        </div>
+    `;
+    
+    footer.appendChild(footerContent);
+}
+ 
