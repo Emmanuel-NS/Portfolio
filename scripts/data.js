@@ -11,7 +11,7 @@ const resumeData = {
     education:[{
         school: 'African Leadership University (ALU)',
         degree: 'Bachelor of Science in Software Engineering',
-        period: '2023 - Present',
+        period: '2024 - Present',
         shortDescription: 'Specialized in Software Development and Cybersecurity',
         fullDescription: `• Engaged in hands-on software engineering projects
                           • Developing skills in cybersecurity operations
@@ -29,7 +29,7 @@ const resumeData = {
                           • Worked on security governance frameworks`
     },
     {
-        school: 'GS Byumba Inyange',
+        school: 'ES Sancta Maria Karambo',
         degree: 'A2 Diploma in Mathematics, Computer Science, and Economics',
         period: '2019 - 2023',
         shortDescription: 'High school diploma with a focus on technology and economics',
