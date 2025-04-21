@@ -444,3 +444,26 @@
       grid-template-columns: 1fr;
     }
   }
+  /* Project Title Link */
+.project-title a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.project-title a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Icon next to title */
+.link-icon {
+  font-size: 1em;
+  transition: transform 0.3s ease;
+}
+.project-title a:hover .link-icon {
+  transform: rotate(20deg) scale(1.2);
+}

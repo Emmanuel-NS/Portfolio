@@ -40,10 +40,15 @@ function createProjectsSection() {
         const projectItem = document.createElement('div');
         projectItem.className = `project-item ${index === 0 ? 'active' : ''}`;
         
-        projectItem.innerHTML = `
-            <h3>${project.title}</h3>
-            <p>Technologies: ${project.technologies.join(', ')}</p>
-        `;
+        projectItem.innerHTML =  projectItem.innerHTML = `
+            <h3 class="project-title">
+              <a href="${project.link}" target="_blank" rel="noopener noreferrer">
+                <span class="link-icon">🔗</span>
+                ${project.title}
+              </a>
+            </h3>
+            <p class="project-tech">Technologies: ${project.technologies.join(', ')}</p>
+          `;
   
         const descriptionWrapper = createExpandableSection(
             project.shortDescription,

@@ -126,7 +126,8 @@ const resumeData = {
                             • Provides coding tutorials and hands-on practice exercises
                             • Hosts competitions to test students' digital skills
                             • Connects students with mentors in the tech industry`,
-            technologies: ['React', 'Node.js', 'MongoDB', 'Python']
+            technologies: ['React', 'Node.js', 'MongoDB', 'Python'],
+            link: 'https://emmanuel-ns.github.io/Portfolio/'
         },
         {
             title: 'Secure E-commerce Platform',
@@ -135,7 +136,8 @@ const resumeData = {
                             • Secure authentication and data encryption
                             • Real-time inventory and payment gateway integration
                             • Optimized database for fast and scalable performance`,
-            technologies: ['Django', 'React', 'PostgreSQL', 'Docker']
+            technologies: ['Django', 'React', 'PostgreSQL', 'Docker'],
+            link: 'https://emmanuel-ns.github.io/Portfolio/'
         },
         {
             title: 'Cybersecurity Governance Framework',
@@ -144,7 +146,8 @@ const resumeData = {
                             • Risk management and compliance measures
                             • Security awareness training and third-party risk assessment
                             • Continuous monitoring strategies for threat detection`,
-            technologies: ['Risk Analysis', 'ISO 27001', 'SOC 2 Compliance']
+            technologies: ['Risk Analysis', 'ISO 27001', 'SOC 2 Compliance'],
+            link: 'https://emmanuel-ns.github.io/Portfolio/'
         },
         {
             title: 'Automated Security Audit Tool',
@@ -153,7 +156,8 @@ const resumeData = {
                             • Scans applications for vulnerabilities in real-time
                             • Generates security reports with risk-level classification
                             • Integrates with CI/CD pipelines for continuous security testing`,
-            technologies: ['Python', 'Bash', 'OWASP ZAP', 'Docker']
+            technologies: ['Python', 'Bash', 'OWASP ZAP', 'Docker'],
+            link: 'https://emmanuel-ns.github.io/Portfolio/'
         }
     ],
     
