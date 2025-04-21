@@ -63,14 +63,14 @@ const resumeData = {
         shortBio: 'Software engineer and cybersecurity analyst passionate about building secure and scalable digital solutions.',
         fullBio: `I am a dedicated Software Engineer and Cybersecurity Analyst with a strong passion for building secure, scalable, and efficient digital solutions. 
                   With experience in full-stack development, cybersecurity operations, and ICT education, I have led projects that bridge the gap between theoretical 
-                  and practical technology applications. As the founder and leader of Coding with Digital Experience[CODE Club], I am committed to fostering 
+                  and practical technology applications. As the founder of Coding with Digital Experience[CODE Club], I am committed to fostering 
                   digital literacy and innovation. My expertise spans web development, security operations, software architecture, and IT education, making me a 
                   versatile tech professional capable of delivering impactful solutions.`
     },
     
     experience: [
         {
-            title: 'Software Engineer & Security Analyst Intern',
+            title: 'Security Analyst Intern',
             company: 'Forward Edge Consulting Ltd.',
             period: 'Sep 2024 - Mar 2025',
             shortDescription: 'Developing and securing digital systems through vulnerability assessments and software solutions.',
@@ -90,82 +90,84 @@ const resumeData = {
                             • Organizing coding competitions and ICT awareness programs`
         },
         {
-            title: 'Founder & Lead Developer',
+            title: 'Founder of CODE Club',
             company: 'CODE Club',
             period: '2024 - Present',
-            shortDescription: 'Leading an initiative to enhance ICT education and digital literacy in Rwanda.',
-            fullDescription: `• Developing software platforms to facilitate digital learning
+            shortDescription: 'Leading an initiative to enhance ICT education and digital literacy.',
+            fullDescription: `
                             • Organizing coding and digital skills competitions
                             • Collaborating with stakeholders to improve ICT education in schools`
         },
+       
         {
-            title: 'Software Engineer (Freelance)',
-            company: 'Self-Employed',
-            period: '2023 - Present',
-            shortDescription: 'Developing web applications and software solutions for businesses and individuals.',
-            fullDescription: `• Building scalable web applications using modern technologies
-                            • Developing cybersecurity solutions for secure authentication and data protection
-                            • Consulting on software design, database management, and UI/UX optimization`
-        },
-        {
-            title: 'Cybersecurity Bootcamp Leader',
+            title: 'Cybersecurity Bootcamp Team Leader',
             company: 'Forward Edge Cybersecurity Bootcamp',
             period: '2024',
-            shortDescription: 'Led a cybersecurity project, gaining expertise in security operations and risk management.',
+            shortDescription: 'Led a cybersecurity group projects, gaining expertise in security operations and risk management.',
             fullDescription: `• Conducted penetration testing and security risk assessments
-                            • Developed a security governance framework for an enterprise
                             • Earned an exceptional certificate for outstanding leadership`
         }
     ],
     
     projects: [
         {
-            title: 'CODE Club Platform',
-            shortDescription: 'A digital platform enhancing ICT education and digital literacy in Rwanda.',
-            fullDescription: `Developed an interactive platform that:
-                            • Provides coding tutorials and hands-on practice exercises
-                            • Hosts competitions to test students' digital skills
-                            • Connects students with mentors in the tech industry`,
-            technologies: ['React', 'Node.js', 'MongoDB', 'Python'],
-            link: 'https://emmanuel-ns.github.io/Portfolio/'
+          title: 'Movie Streaming Website',
+          shortDescription: 'A fully‑responsive movie streaming UI built with vanilla HTML, CSS & JavaScript.',
+          fullDescription: `• Crafted a dynamic hero banner and carousels without any frameworks  
+      • Implemented responsive layouts using CSS Grid & Flexbox  
+      • Built a custom slider, sticky header, and multi‑page navigation purely in JS  
+      • Enhanced performance by lazy‑loading images and optimizing DOM updates`,
+          technologies: ['HTML5', 'CSS3', 'JavaScript'],
+          link: 'https://emmanuel-ns.github.io/web_design/'
         },
         {
-            title: 'Secure E-commerce Platform',
-            shortDescription: 'Developed and secured an online shopping platform.',
-            fullDescription: `Built a full-stack e-commerce platform featuring:
-                            • Secure authentication and data encryption
-                            • Real-time inventory and payment gateway integration
-                            • Optimized database for fast and scalable performance`,
-            technologies: ['Django', 'React', 'PostgreSQL', 'Docker'],
-            link: 'https://emmanuel-ns.github.io/Portfolio/'
+          title: 'Health Tracker System',
+          shortDescription: 'I have Contributed to this Python menu‑driven health tracker with user auth and MySQL integration.',
+          fullDescription: `• Designed a CLI interface for user registration & login with data validation  
+      • Integrated MySQL to store user profiles, health logs, and doctor contacts  
+      • Provided health tips, appointment booking, and progress reports  
+      • Ensured security by hashing passwords and sanitizing inputs`,
+          technologies: ['Python', 'MySQL'],
+          link: 'https://github.com/Emmanuel-NS/Community-Health_Tracker-System'
         },
         {
-            title: 'Cybersecurity Governance Framework',
-            shortDescription: 'Developed a security program management plan for a government agency.',
-            fullDescription: `Created a security governance framework covering:
-                            • Risk management and compliance measures
-                            • Security awareness training and third-party risk assessment
-                            • Continuous monitoring strategies for threat detection`,
-            technologies: ['Risk Analysis', 'ISO 27001', 'SOC 2 Compliance'],
-            link: 'https://emmanuel-ns.github.io/Portfolio/'
-        },
+            title: 'Emm3 URL Scanner',
+            shortDescription: 'A web app leveraging the VirusTotal API to scan URLs for potential threats.',
+            fullDescription: `• Integrated VirusTotal API to submit and retrieve scan reports  
+          • Built a clean, user‑friendly interface with instant feedback  
+          • Parsed API responses to highlight risk indicators and domains  
+          • Configured and managed server deployment (NGINX/Node.js) with HTTPS encryption  
+          • Ensured high performance and reliability via load balancing and caching strategies  
+          • Learned best practices for RESTful API consumption, error handling, and web security`,
+            technologies: [
+              'JavaScript',
+              'HTML',
+              'CSS',
+              'VirusTotal API',
+              'Node.js',
+              'NGINX',
+              'HAproxy',
+              'HTTPS/ certbot',
+            ],
+            link: 'https://www.emm3.tech/' 
+          },
         {
-            title: 'Automated Security Audit Tool',
-            shortDescription: 'Built a tool to automate security assessments for enterprise applications.',
-            fullDescription: `Developed a security audit tool that:
-                            • Scans applications for vulnerabilities in real-time
-                            • Generates security reports with risk-level classification
-                            • Integrates with CI/CD pipelines for continuous security testing`,
-            technologies: ['Python', 'Bash', 'OWASP ZAP', 'Docker'],
-            link: 'https://emmanuel-ns.github.io/Portfolio/'
+          title: 'DevConnect',
+          shortDescription: 'A React‑based frontend showcase platform for developers and blogs.',
+          fullDescription: `• Built with React, React Router & Tailwind CSS for rapid UI development  
+      • Implemented dynamic JSON‑driven content loading for profiles and posts  
+      • Added dark/light mode toggle, responsive grid layouts, and modals  
+      • Gained deep experience with component design, hooks, and deployment to GitHub Pages`,
+          technologies: ['React', 'React Router', 'Tailwind CSS', 'JavaScript'],
+          link: 'https://emmanuel-ns.github.io/devconnect'
         }
-    ],
+      ],      
     
     skills: [
         'Software Development', 'Cybersecurity', 'Full-Stack Development', 'Threat Intelligence',
         'Penetration Testing', 'Secure Coding Practices', 'Risk Management', 'Linux',
-        'GitHub & Version Control', 'Incident Response', 'Python', 'JavaScript', 'React', 
-        'Node.js', 'Django', 'SQL & NoSQL Databases', 'Cloud Security', 'Project Management'
+        'GitHub & Version Control', 'Python', 'JavaScript', 'React', 
+        'Node.js', 'Django', 'SQL & NoSQL Databases', 'Project Management'
     ],
     socialMedia: {
         github: 'https://github.com/',
