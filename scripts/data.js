@@ -108,67 +108,78 @@ const resumeData = {
                             • Earned an exceptional certificate for outstanding leadership`
         }
     ],
-    
     projects: [
-        {
-          title: 'Movie Streaming Website',
-          shortDescription: 'A fully‑responsive movie streaming UI built with vanilla HTML, CSS & JavaScript.',
-          fullDescription: `• Crafted a dynamic hero banner and carousels without any frameworks  
-      • Implemented responsive layouts using CSS Grid & Flexbox  
-      • Built a custom slider, sticky header, and multi‑page navigation purely in JS  
-      • Enhanced performance by lazy‑loading images and optimizing DOM updates`,
-          technologies: ['HTML5', 'CSS3', 'JavaScript'],
-          link: 'https://emmanuel-ns.github.io/web_design/'
-        },
-        {
-          title: 'Health Tracker System',
-          shortDescription: 'I have Contributed to this Python menu‑driven health tracker with user auth and MySQL integration.',
-          fullDescription: `• Designed a CLI interface for user registration & login with data validation  
-      • Integrated MySQL to store user profiles, health logs, and doctor contacts  
-      • Provided health tips, appointment booking, and progress reports  
-      • Ensured security by hashing passwords and sanitizing inputs`,
-          technologies: ['Python', 'MySQL'],
-          link: 'https://github.com/Emmanuel-NS/Community-Health_Tracker-System'
-        },
-        {
-            title: 'Emm3 URL Scanner',
-            shortDescription: 'A web app leveraging the VirusTotal API to scan URLs for potential threats.',
-            fullDescription: `• Integrated VirusTotal API to submit and retrieve scan reports  
-          • Built a clean, user‑friendly interface with instant feedback  
-          • Parsed API responses to highlight risk indicators and domains  
-          • Configured and managed server deployment (NGINX/Node.js) with HTTPS encryption  
-          • Ensured high performance and reliability via load balancing and caching strategies  
-          • Learned best practices for RESTful API consumption, error handling, and web security`,
-            technologies: [
-              'JavaScript',
-              'HTML',
-              'CSS',
-              'VirusTotal API',
-              'Node.js',
-              'NGINX',
-              'HAproxy',
-              'HTTPS/ certbot',
-            ],
-            link: 'https://www.emm3.tech/' 
-          },
-        {
-          title: 'DevConnect',
-          shortDescription: 'A React‑based frontend showcase platform for developers and blogs.',
-          fullDescription: `• Built with React, React Router & Tailwind CSS for rapid UI development  
-      • Implemented dynamic JSON‑driven content loading for profiles and posts  
-      • Added dark/light mode toggle, responsive grid layouts, and modals  
-      • Gained deep experience with component design, hooks, and deployment to GitHub Pages`,
-          technologies: ['React', 'React Router', 'Tailwind CSS', 'JavaScript'],
-          link: 'https://emmanuel-ns.github.io/devconnect'
-        }
-      ],      
-    
-    skills: [
-        'Software Development', 'Cybersecurity', 'Full-Stack Development', 'Threat Intelligence',
-        'Penetration Testing', 'Secure Coding Practices', 'Risk Management', 'Linux',
-        'GitHub & Version Control', 'Python', 'JavaScript', 'React', 
-        'Node.js', 'Django', 'SQL & NoSQL Databases', 'Project Management'
+  {
+    title: 'Movie Streaming Website',
+    shortDescription: 'A fully-responsive movie streaming UI built with vanilla HTML, CSS & JavaScript.',
+    fullDescription: `• Crafted a dynamic hero banner and carousels without any frameworks  
+• Implemented responsive layouts using CSS Grid & Flexbox  
+• Built a custom slider, sticky header, and multi-page navigation purely in JS  
+• Enhanced performance by lazy-loading images and optimizing DOM updates`,
+    technologies: ['HTML5', 'CSS3', 'JavaScript'],
+    link: 'https://emmanuel-ns.github.io/web_design/'
+  },
+  {
+    title: 'Health Tracker System',
+    shortDescription: 'I have Contributed to this Python menu-driven health tracker with user auth and MySQL integration.',
+    fullDescription: `• Designed a CLI interface for user registration & login with data validation  
+• Integrated MySQL to store user profiles, health logs, and doctor contacts  
+• Provided health tips, appointment booking, and progress reports  
+• Ensured security by hashing passwords and sanitizing inputs`,
+    technologies: ['Python', 'MySQL'],
+    link: 'https://github.com/Emmanuel-NS/Community-Health_Tracker-System'
+  },
+  {
+    title: 'Emm3 URL Scanner',
+    shortDescription: 'A web app leveraging the VirusTotal API to scan URLs for potential threats.',
+    fullDescription: `• Integrated VirusTotal API to submit and retrieve scan reports  
+• Built a clean, user-friendly interface with instant feedback  
+• Parsed API responses to highlight risk indicators and domains  
+• Configured and managed server deployment (NGINX/Node.js) with HTTPS encryption  
+• Ensured high performance and reliability via load balancing and caching strategies  
+• Learned best practices for RESTful API consumption, error handling, and web security`,
+    technologies: [
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'VirusTotal API',
+      'Node.js',
+      'NGINX',
+      'HAproxy',
+      'HTTPS/ certbot'
     ],
+    link: 'http://www.emm3.tech/' 
+  },
+  {
+    title: 'FARUMASI – E-Pharmacy Solution',
+    shortDescription: 'A digital platform to improve rural access to medicine through online pharmacy services.',
+    fullDescription: `• Collaborated in a team to design and implement an e-pharmacy platform  
+• Developed system architecture focusing on scalability and security  
+• Designed user flow for ordering, payment, and delivery tracking  
+• Presented and pitched the solution in class projects and competitions  
+• Focused on solving real community challenges through tech innovation`,
+    technologies: ['Node.js', 'JavaScript', 'React', 'SQL', 'HTML/CSS'],
+    link: 'https://farumasi.vercel.app/home'
+  },
+  {
+    title: 'MoMo Dashboard',
+    shortDescription: 'A functional mobile money transaction dashboard built with modern web technologies.',
+    fullDescription: `• Recreated a responsive user dashboard for mobile money transactions  
+• Designed clean UI components and implemented data-driven views  
+• Integrated responsive design principles for multi-device compatibility  
+• Practiced secure coding standards in handling sensitive transaction data  
+• Gained deeper experience in Node.js, React, and state management`,
+    technologies: ['Node.js', 'React', 'HTML', 'CSS', 'Tailwind CSS'],
+    link: 'https://github.com/Emmanuel-NS/MoMo-Dashboard'
+  }
+],
+
+skills: [
+  'Software Development', 'Cybersecurity', 'Full-Stack Development', 'Threat Intelligence',
+  'Penetration Testing', 'Secure Coding Practices', 'Risk Management', 'Linux',
+  'GitHub & Version Control', 'Python', 'JavaScript', 'React', 
+  'Node.js', 'Django', 'SQL & NoSQL Databases', 'Project Management'
+],
     socialMedia: {
         github: 'https://github.com/',
         linkedin: 'https://linkedin.com/in/emmanuel-nsabagasani',
