@@ -1,0 +1,134 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum SocialLabel {
+  GITHUB
+  LINKEDIN
+  X
+}
+
+enum ConsultingStatus {
+  DELIVERED
+  IN_PROGRESS
+}
+
+model HeroContent {
+  id                 Int      @id @default(1)
+  name               String
+  title              String
+  summary            String
+  primaryCtaLabel    String
+  primaryCtaHref     String
+  secondaryCtaLabel  String
+  secondaryCtaHref   String
+  updatedAt          DateTime @updatedAt @default(now())
+}
+
+model HeroHighlight {
+  id        Int    @id @default(autoincrement())
+  label     String
+  value     String
+  sortOrder Int    @default(0)
+}
+
+model HeroSpotlight {
+  id         Int    @id @default(autoincrement())
+  title      String
+  stat       String
+  descriptor String
+  sortOrder  Int    @default(0)
+}
+
+model EducationEntry {
+  id          Int    @id @default(autoincrement())
+  institution String
+  credential  String
+  period      String
+  description String
+  sortOrder   Int    @default(0)
+}
+
+model ExperienceEntry {
+  id          Int    @id @default(autoincrement())
+  role        String
+  organization String
+  period      String
+  summary     String
+  sortOrder   Int    @default(0)
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  tech        String[]
+  link        String
+  impact      String
+  sortOrder   Int      @default(0)
+}
+
+model SkillGroup {
+  id        Int      @id @default(autoincrement())
+  title     String
+  items     String[]
+  sortOrder Int      @default(0)
+}
+
+model Achievement {
+  id      Int    @id @default(autoincrement())
+  title   String
+  context String
+  detail  String
+  sortOrder Int  @default(0)
+}
+
+model ConsultingProject {
+  id          Int              @id @default(autoincrement())
+  client      String
+  focus       String
+  description String
+  status      ConsultingStatus @default(IN_PROGRESS)
+  sortOrder   Int              @default(0)
+}
+
+model ContactInfo {
+  id                     Int             @id @default(1)
+  name                   String
+  tagline                String
+  summary                String
+  email                  String
+  whatsappNumber         String
+  whatsappLink           String
+  whatsappAvailability   String
+  socials                ContactSocial[]
+  updatedAt              DateTime         @updatedAt @default(now())
+}
+
+model ContactSocial {
+  id        Int         @id @default(autoincrement())
+  label     SocialLabel
+  href      String
+  sortOrder Int         @default(0)
+  contact   ContactInfo @relation(fields: [contactId], references: [id], onDelete: Cascade)
+  contactId Int
+}
+
+model AdminSettings {
+  id                   Int      @id @default(1)
+  passcodeHash         String
+  totpSecret           String
+  twoFactorEnabled     Boolean  @default(false)
+  updatedAt            DateTime @updatedAt @default(now())
+}

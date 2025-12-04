@@ -1,9 +1,13 @@
 import { useEffect, useState, type KeyboardEvent } from 'react'
 import { ArrowUpRight, Layers, PlayCircle, X } from 'lucide-react'
 import { SectionHeading } from './SectionHeading'
-import { projects } from '../data/content'
+import type { Project } from '../data/content'
 
-export function Projects() {
+type ProjectsProps = {
+  projects: Project[]
+}
+
+export function Projects({ projects }: ProjectsProps) {
   const [preview, setPreview] = useState<{ title: string; link: string } | null>(null)
 
   useEffect(() => {
@@ -24,7 +28,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="Impact"
           title="Flagship builds with live previews"
-          description="Healthcare, security, fintech, and community platforms engineered with resilience—tap any card to see the experience instantly."
+          description="Healthcare, security, fintech, and community builds with quick previews of the live work."
         />
         <div className="grid gap-8 lg:grid-cols-2">
           {projects.map((project, index) => {

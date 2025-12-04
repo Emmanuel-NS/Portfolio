@@ -66,7 +66,7 @@ export const heroContent = {
   name: 'Emmanuel NSABAGASANI',
   title: 'Software Engineer · Cybersecurity Analyst · IT Educator · Digital Solutions Consultant',
   summary:
-    'Rwandan builder who fuses secure engineering, cyber defense, ICT education, and board-level digital consulting to launch resilient products and advisory playbooks.',
+    'Rwandan software engineer focused on secure systems, cyber defense, ICT instruction, and practical consulting for teams that need dependable results.',
   primaryCta: { label: 'Explore projects', href: '#projects' },
   secondaryCta: { label: 'Email me', href: 'mailto:e.nsabagasa@alustudent.com' },
 }
@@ -259,12 +259,12 @@ export const contactInfo: ContactInfo = {
   name: 'Emmanuel NSABAGASANI',
   tagline: 'Software Engineer | Cybersecurity Analyst | IT Educator | Digital Solutions Consultant',
   summary:
-    'Open to building resilient software, advising on cybersecurity programs, mentoring ICT teams, and consulting on end-to-end digital transformation.',
+    'I build production software, guide cybersecurity programs, mentor ICT teams, and support organizations through hands-on consulting.',
   email: 'e.nsabagasa@alustudent.com',
   whatsapp: {
     number: '+250790160172',
     href: buildUrl('https', 'wa.me/250790160172?text=Hi%20Emmanuel%2C%20I%20found%20your%20portfolio%20and%20would%20love%20to%20connect.'),
-    availability: 'Fastest real-time response via WhatsApp—update this number if needed.',
+    availability: 'Fastest replies are on WhatsApp.',
   },
   socials: [
     { label: 'GitHub', href: buildUrl('https', 'github.com/Emmanuel-NS') },
@@ -311,3 +311,31 @@ export const consultingProjects: ConsultingProject[] = [
     status: 'In Progress',
   },
 ]
+
+export type HeroContent = typeof heroContent
+
+export type PortfolioContentData = {
+  hero: HeroContent
+  heroHighlights: HeroHighlight[]
+  heroSpotlights: HeroSpotlight[]
+  education: EducationEntry[]
+  experience: ExperienceEntry[]
+  projects: Project[]
+  skillGroups: SkillGroup[]
+  achievements: Achievement[]
+  consultingProjects: ConsultingProject[]
+  contact: ContactInfo
+}
+
+export const defaultPortfolioContent: PortfolioContentData = {
+  hero: heroContent,
+  heroHighlights,
+  heroSpotlights,
+  education,
+  experience,
+  projects,
+  skillGroups,
+  achievements,
+  consultingProjects,
+  contact: contactInfo,
+}

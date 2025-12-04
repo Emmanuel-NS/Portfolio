@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Github, Linkedin, Menu, Twitter, X as CloseIcon } from 'lucide-react'
-import { contactInfo } from '../data/content'
+import type { ContactInfo } from '../data/content'
 
 const navLinks = [
   { label: 'Projects', href: '#projects' },
@@ -16,7 +16,11 @@ const socialIconMap = {
   X: Twitter,
 }
 
-export function Header() {
+type HeaderProps = {
+  contactInfo: ContactInfo
+}
+
+export function Header({ contactInfo }: HeaderProps) {
   const [open, setOpen] = useState(false)
 
   return (

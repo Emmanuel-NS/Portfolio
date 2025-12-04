@@ -1,14 +1,19 @@
 import { SectionHeading } from './SectionHeading'
-import { education, experience } from '../data/content'
+import type { EducationEntry, ExperienceEntry } from '../data/content'
 
-export function About() {
+type AboutProps = {
+  education: EducationEntry[]
+  experience: ExperienceEntry[]
+}
+
+export function About({ education, experience }: AboutProps) {
   return (
     <section id="about" className="px-4 py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Journey"
-           title="Education timeline and field impact"
-           description="STEM depth that fuels cybersecurity research, ICT education wins, and consulting leadership for real-world deployments."
+          title="Education and experience"
+          description="Coursework and roles that led me from ICT classrooms to security, software delivery, and consulting."
         />
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-8">

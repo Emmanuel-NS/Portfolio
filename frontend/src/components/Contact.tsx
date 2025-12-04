@@ -1,7 +1,7 @@
 import type { LucideIcon } from 'lucide-react'
 import { ArrowUpRight, Github, Linkedin, Mail, MessageCircle, PhoneCall, Twitter } from 'lucide-react'
 import { SectionHeading } from './SectionHeading'
-import { contactInfo } from '../data/content'
+import type { ContactInfo } from '../data/content'
 
 const iconMap: Record<'GitHub' | 'LinkedIn' | 'X', LucideIcon> = {
   GitHub: Github,
@@ -9,14 +9,18 @@ const iconMap: Record<'GitHub' | 'LinkedIn' | 'X', LucideIcon> = {
   X: Twitter,
 }
 
-export function Contact() {
+type ContactProps = {
+  contactInfo: ContactInfo
+}
+
+export function Contact({ contactInfo }: ContactProps) {
   return (
     <section id="contact" className="px-4 pb-28 pt-10">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Collab"
-          title="Reach the builder-consultant directly"
-          description="Email, WhatsApp, or socials to launch secure software builds, cybersecurity programs, ICT education, or digital consulting engagements."
+          eyebrow="Contact"
+          title="Get in touch"
+          description="Use email, WhatsApp, or social links for project work, security reviews, or teaching support."
         />
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="spotlight-card rounded-[2rem] border border-white/10 p-10">
@@ -73,7 +77,7 @@ export function Contact() {
               </div>
             </div>
             <div className="glass-panel flex flex-col gap-3 rounded-3xl border border-white/5 px-6 py-5 text-sm text-muted md:flex-row md:items-center md:justify-between">
-              <p>Available for secure software, cybersecurity operations, ICT education, and digital consulting partnerships.</p>
+              <p>Available for software builds, cybersecurity support, ICT teaching, and consulting work.</p>
               <div className="flex flex-col gap-2 text-xs uppercase tracking-[0.4em] sm:flex-row">
                 <a href={`mailto:${contactInfo.email}`} className="button-glow inline-flex items-center justify-center px-4 py-2">
                   Email

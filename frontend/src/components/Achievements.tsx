@@ -1,15 +1,19 @@
 import { Trophy } from 'lucide-react'
 import { SectionHeading } from './SectionHeading'
-import { achievements } from '../data/content'
+import type { Achievement } from '../data/content'
 
-export function Achievements() {
+type AchievementsProps = {
+  achievements: Achievement[]
+}
+
+export function Achievements({ achievements }: AchievementsProps) {
   return (
     <section id="achievements" className="px-4 py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Proof"
           title="Credentials across security, teaching, and consulting"
-          description="Elite certificates, national ICT results, and client celebrations that validate the multi-hyphenate story."
+          description="Highlights from cybersecurity training, ICT teaching results, and client consulting wins."
         />
         <div className="grid gap-6 md:grid-cols-2">
           {achievements.map((item) => (

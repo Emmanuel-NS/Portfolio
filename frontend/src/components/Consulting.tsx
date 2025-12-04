@@ -1,15 +1,19 @@
 import { Building2, CheckCircle2 } from 'lucide-react'
 import { SectionHeading } from './SectionHeading'
-import { consultingProjects } from '../data/content'
+import type { ConsultingProject } from '../data/content'
 
-export function Consulting() {
+type ConsultingProps = {
+  consultingProjects: ConsultingProject[]
+}
+
+export function Consulting({ consultingProjects }: ConsultingProps) {
   return (
     <section id="consulting" className="px-4 py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Consulting"
           title="Consulting partners and digital outcomes"
-          description="Agritech, media, and wellness organizations bring me in to translate strategy into secure shipped platforms and training."
+          description="I help agritech, media, and wellness teams move from strategy to shipped software and training."
         />
         <div className="grid gap-6 lg:grid-cols-3">
           {consultingProjects.map((project) => (

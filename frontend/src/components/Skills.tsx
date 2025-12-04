@@ -1,23 +1,27 @@
 import { ShieldCheck, Zap } from 'lucide-react'
 import { SectionHeading } from './SectionHeading'
-import { skillGroups } from '../data/content'
+import type { SkillGroup } from '../data/content'
 
-export function Skills() {
+type SkillsProps = {
+  skillGroups: SkillGroup[]
+}
+
+export function Skills({ skillGroups }: SkillsProps) {
   return (
     <section id="skills" className="px-4 py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Capabilities"
-          title="Capabilities powering secure delivery"
-          description="Every engagement blends cybersecurity rigor, software craftsmanship, IT education, and consulting instincts into one toolkit."
+          title="Core capabilities"
+          description="Security, software delivery, ICT teaching, and consulting experience show up in every engagement."
         />
         <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
           <div className="spotlight-card relative rounded-[2rem] border border-white/10 p-8">
             <div className="relative z-10 space-y-4">
               <ShieldCheck className="h-10 w-10 text-neon" />
-              <p className="text-xl font-semibold text-white">Secure-by-design approach</p>
+              <p className="text-xl font-semibold text-white">Secure build mindset</p>
               <p className="text-sm text-muted">
-                From penetration testing to resilient shipping practices, engagements stay audit-ready without dulling the product shine.
+                Penetration testing, code reviews, and release habits keep projects audit-ready without slowing delivery.
               </p>
             </div>
           </div>

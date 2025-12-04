@@ -15,6 +15,11 @@ dist-ssr
 .env.local
 .env.*
 .envrc
+.vercel
+.output
+server/.env
+server/.env.*
+server/dist
 .DS_Store
 
 # Editor directories and files
