@@ -66,7 +66,8 @@ type ApiContentResponse = {
   contact: ApiContactInfo | null
 }
 
-const apiBase = (import.meta.env.VITE_API_URL ?? '/api').replace(/\/$/, '')
+const apiOrigin = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '')
+const apiBase = apiOrigin ? `${apiOrigin}/api` : '/api'
 const contentEndpoint = `${apiBase}/content`
 
 const socialLabelMap: Record<ApiSocialLabel, ContactInfo['socials'][number]['label']> = {
