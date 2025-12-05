@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:full": "concurrently \"npm:dev\" \"npm --prefix server run dev\"",
+    "dev:full": "concurrently \"npm:dev\" \"npm --prefix ../server run dev\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prisma:generate": "npm --prefix server run prisma:generate",
-    "prisma:migrate": "npm --prefix server run prisma:migrate",
-    "prisma:seed": "npm --prefix server run prisma:seed"
+    "prisma:generate": "npm --prefix ../server run prisma:generate",
+    "prisma:migrate": "npm --prefix ../server run prisma:migrate",
+    "prisma:seed": "npm --prefix ../server run prisma:seed"
   },
   "dependencies": {
     "framer-motion": "^12.23.25",

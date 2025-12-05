@@ -21,11 +21,11 @@ npm install
 npm run dev:full # runs frontend + API
 ```
 
-Visit `http://localhost:5173` to preview the public site. The admin workspace lives under `/admin` and talks to the Express API (`server/`).
+Visit `http://localhost:5173` to preview the public site. The admin workspace lives under `/admin` and talks to the Express API (`../server/`).
 
 ⚠️ The public site now reads its hero, projects, achievements, and contact data directly from `/api/content`, so keep the API server running (for example with `npm run dev:full`) to see admin edits reflected immediately.
 
-> Prefer to run each side manually? Use `npm run dev` for the frontend and `npm --prefix server run dev` for the API.
+> Prefer to run each side manually? Use `npm run dev` for the frontend and `npm --prefix ../server run dev` for the API.
 
 - `VITE_API_URL` (optional) – set this to the deployed API origin if the frontend and backend are hosted separately. During local dev we rely on Vite’s `/api` proxy (configured in `vite.config.ts`) so no extra env is needed.
 - Run `npm run prisma:migrate` and `npm run prisma:seed` to sync the Postgres schema/data before opening the admin.
@@ -34,7 +34,7 @@ Visit `http://localhost:5173` to preview the public site. The admin workspace li
 
 The admin experience at `/admin` now requires a passcode (and optional Authy/Google Authenticator code) before unlocking the dashboard.
 
-Configure the secrets inside `server/.env`:
+Configure the secrets inside `../server/.env`:
 
 ```env
 ADMIN_PASSCODE="admin-passcode"
@@ -52,7 +52,7 @@ ADMIN_SESSION_TTL="86400" # optional override, seconds
 ## Project scripts
 
 - `npm run dev` – Vite dev server with Fast Refresh
-- `npm run dev:full` – Runs Vite + Express API (via `server/`) together
+- `npm run dev:full` – Runs Vite + Express API (via `../server/`) together
 - `npm run build` – Type-check (`tsc -b`) and create optimized production build
 - `npm run lint` – ESLint across the repo
 - `npm run preview` – Serve the compiled `dist` folder
